@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/shinnn/block-comment.js.svg)](https://david-dm.org/shinnn/block-comment.js)
 [![devDependency Status](https://david-dm.org/shinnn/block-comment.js/dev-status.svg)](https://david-dm.org/shinnn/block-comment.js#info=devDependencies)
 
-Create multi-line block comment from a string or an array
+Create a multi-line block comment from a string or an array
 
 ```javascript
 var comment = blockComment('Hello\nworld.', {start: '!'})

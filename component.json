@@ -2,7 +2,7 @@
   "name": "block-comment",
   "version": "1.0.0",
   "repository": "shinnn/block-comment.js",
-  "description": "Create multi-line block comment from a string or an array",
+  "description": "Create a multi-line block comment from a string or an array",
   "keywords": [
     "string",
     "comment",
