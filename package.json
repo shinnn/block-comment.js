@@ -1,0 +1,57 @@
+{
+  "name": "block-comment",
+  "version": "0.0.0",
+  "description": "Create multi-line block comment from a string or an array",
+  "main": "./block-comment-cjs.js",
+  "bin": "cli.js",
+  "files": [
+    "cli.js",
+    "block-comment-cjs.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "pretest": "eslint *.js & jscs *.js",
+    "test": "node test-api.js && node test-cli.js",
+    "coverage": "istanbul cover test-api.js",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+  },
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "email": "snnskwtnb@gmail.com",
+    "url": "https://github.com/shinnn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinnn/block-comment.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shinnn/block-comment.js/issues"
+  },
+  "homepage": "https://github.com/shinnn/block-comment.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/block-comment.js/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "string",
+    "comment",
+    "block",
+    "multline",
+    "browser",
+    "client-side"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "get-stdin": "^3.0.0",
+    "minimist": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.9.1",
+    "istanbul": "^0.3.2",
+    "istanbul-coveralls": "^1.0.1",
+    "jscs": "^1.7.3",
+    "tape": "^3.0.1"
+  }
+}
