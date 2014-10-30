@@ -89,17 +89,17 @@ This function has three properties used as components of the comment template.
 
 #### blockComment.open
 
-Type: `String`
+Type: `String`  
 Default: `'/*'`
 
 #### blockComment.linePrefix
 
-Type: `String`
+Type: `String`  
 Default: `' *'`
 
 #### blockComment.close
 
-Type: `String`
+Type: `String`  
 Default: `'*/'`
 
 You can overwrite these properties if you want to modify the comment template. However, you don't have to care about them in most cases.
