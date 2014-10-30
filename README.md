@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.org/shinnn/block-comment.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/o0c4g0gbgoa481mf?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/block-comment-js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.svg)](https://coveralls.io/r/shinnn/block-comment)
-[![Dependency Status](https://david-dm.org/shinnn/block-comment.svg)](https://david-dm.org/shinnn/block-comment)
-[![devDependency Status](https://david-dm.org/shinnn/block-comment/dev-status.svg)](https://david-dm.org/shinnn/block-comment#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg)](https://coveralls.io/r/shinnn/block-comment.js)
+[![Dependency Status](https://david-dm.org/shinnn/block-comment.js.svg)](https://david-dm.org/shinnn/block-comment.js)
+[![devDependency Status](https://david-dm.org/shinnn/block-comment.js/dev-status.svg)](https://david-dm.org/shinnn/block-comment.js#info=devDependencies)
 
 Create multi-line block comment from a string or an array
 
