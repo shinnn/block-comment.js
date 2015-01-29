@@ -7,35 +7,38 @@ var argv = require('minimist')(process.argv.slice(2), {
     h: 'help',
     v: 'version'
   },
+  string: ['_', 'start'],
   boolean: ['help', 'version']
 });
-var pkg = require('./package.json');
 
 function help() {
-  var chalk = require('chalk');
+  var sumUp = require('sum-up');
+  var yellow = require('chalk').yellow;
+
+  var pkg = require('./package.json');
+  pkg.description = 'Create multi-line block comment from string';
 
   console.log([
-    chalk.cyan(pkg.name) + chalk.gray(' v' + pkg.version),
-    'Create multi-line block comment from string',
+    sumUp(pkg),
     '',
     'Usage1: ' + pkg.name + ' <string>',
     'Usage2: cat <file> | ' + pkg.name + ' <string>',
     '',
     'Options:',
-    chalk.yellow('--start,   -s <string>') + '  Add something (i.e. `!`) to the first line',
-    chalk.yellow('--help,    -h         ') + '  Print usage information',
-    chalk.yellow('--version, -v         ') + '  Print version',
+    yellow('--start,   -s <string>') + '  Add something (i.e. `!`) to the first line',
+    yellow('--help,    -h         ') + '  Print usage information',
+    yellow('--version, -v         ') + '  Print version',
     ''
   ].join('\n'));
 }
 
 function run(str) {
   var blockComment = require('./');
-  console.log(blockComment('' + str, {start: argv.start}));
+  console.log(blockComment(str, {start: argv.start}));
 }
 
 if (argv.version) {
-  console.log(pkg.version);
+  console.log(require('./package.json').version);
 } else if (argv.help) {
   help();
 } else if (process.stdin.isTTY) {
