@@ -18,54 +18,47 @@ test('"block-comment" command inside TTY context', function(t) {
     return cp;
   };
 
-  cmd(['a\n\r\nb'])
-    .stdout.on('data', function(output) {
-      t.equal(output, [
-        '/*',
-        ' * a',
-        ' *',
-        ' * b',
-        '*/\n'
-      ].join('\n'), 'should print a comment.');
-    });
+  cmd(['a\n\r\nb']).stdout.on('data', function(output) {
+    t.equal(output, [
+      '/*',
+      ' * a',
+      ' *',
+      ' * b',
+      '*/\n'
+    ].join('\n'), 'should print a comment.');
+  });
 
-  cmd(['a', '--start', '!'])
-    .stdout.on('data', function(output) {
-      t.equal(output, [
-        '/*!',
-        ' * a',
-        '*/\n'
-      ].join('\n'), 'should prepend a string using `start` option.');
-    });
+  cmd([1, '--start', '!']).stdout.on('data', function(output) {
+    t.equal(output, [
+      '/*!',
+      ' * 1',
+      '*/\n'
+    ].join('\n'), 'should prepend a string using `start` option.');
+  });
 
-  cmd(['a', '-s', '!'])
-    .stdout.on('data', function(output) {
-      t.equal(output, [
-        '/*!',
-        ' * a',
-        '*/\n'
-      ].join('\n'), 'should use `-s` as an alias of `--start` flag.');
-    });
+  cmd(['a', '-s', '!']).stdout.on('data', function(output) {
+    t.equal(output, [
+      '/*!',
+      ' * a',
+      '*/\n'
+    ].join('\n'), 'should use `-s` as an alias of `--start` flag.');
+  });
 
-  cmd(['--version'])
-    .stdout.on('data', function(output) {
-      t.equal(output, pkg.version + '\n', 'should print version using `--version` flag.');
-    });
+  cmd(['--version']).stdout.on('data', function(output) {
+    t.equal(output, pkg.version + '\n', 'should print version using `--version` flag.');
+  });
 
-  cmd(['-v'])
-    .stdout.on('data', function(output) {
-      t.equal(output, pkg.version + '\n', 'should use `-v` as an alias of `--version`.');
-    });
+  cmd(['-v']).stdout.on('data', function(output) {
+    t.equal(output, pkg.version + '\n', 'should use `-v` as an alias of `--version`.');
+  });
 
-  cmd(['--help'])
-    .stdout.on('data', function(output) {
-      t.ok(/Usage/.test(output), 'should print usage information using `--help` flag.');
-    });
+  cmd(['--help']).stdout.on('data', function(output) {
+    t.ok(/Usage/.test(output), 'should print usage information using `--help` flag.');
+  });
 
-  cmd(['-h'])
-    .stdout.on('data', function(output) {
-      t.ok(/Usage/.test(output), 'should use `-h` as an alias of `--help`.');
-    });
+  cmd(['-h']).stdout.on('data', function(output) {
+    t.ok(/Usage/.test(output), 'should use `-h` as an alias of `--help`.');
+  });
 
   var err = '';
 

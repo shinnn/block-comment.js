@@ -64,7 +64,8 @@ function runTest(description, main) {
     ].join('\n'), 'should modify template using its properties.');
 
     t.throws(
-      main.bind(null, 123), /TypeError/,
+      main.bind(null, 123),
+      /TypeError/,
       'should throw an error when the first argument is not a string or an array.'
     );
 
@@ -87,6 +88,6 @@ runTest('require(\'block-comment\')', require('./'));
 global.window = {};
 
 var bowerMain = require('./bower.json').main;
-require(bowerMain);
+require('./' + bowerMain);
 
 runTest('window.blockComment', window.blockComment);

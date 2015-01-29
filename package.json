@@ -10,8 +10,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "pretest": "eslint *.js & jscs *.js",
-    "test": "node test-api.js && node test-cli.js",
+    "pretest": "jscs *.js && eslint *.js",
+    "test": "tape test-*.js | tap-spec",
     "coverage": "istanbul cover test-api.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
