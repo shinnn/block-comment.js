@@ -1,6 +1,5 @@
 {
   "name": "block-comment",
-  "version": "1.0.0",
   "description": "Create a multi-line block comment from a string or an array",
   "keywords": [
     "string",
@@ -8,7 +7,7 @@
     "block",
     "multline"
   ],
-  "main": "./block-comment.js",
+  "main": "block-comment.js",
   "homepage": "https://github.com/shinnn/block-comment.js",
   "repository": {
     "type": "git",
@@ -23,12 +22,9 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "*.js",
+    "*.json",
     "*.yml",
-    "node_modules",
-    "block-comment-cjs.js",
-    "test-api.js",
-    "test-cli.js",
-    "package.json",
-    "component.json"
+    "node_modules"
   ]
 }
