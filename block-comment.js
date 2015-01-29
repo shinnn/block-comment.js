@@ -24,7 +24,7 @@
     var start = '';
     if (option.start !== undefined) {
       if (/\r?\n/.test(option.start)) {
-        throw new Error('start option should not include newlines.');
+        throw new Error('start option must not include newlines.');
       }
       start = option.start;
     }

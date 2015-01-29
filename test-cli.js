@@ -72,7 +72,7 @@ test('"block-comment" command inside TTY context', function(t) {
   cmd(['a', '--start', '\n'])
     .on('close', function(code) {
       t.notEqual(code, 0, 'should fail when `--start` includes a newline.');
-      t.ok(/should not include newlines/.test(err), 'should print a valid error massage.');
+      t.ok(/must not include newlines/.test(err), 'should print a valid error massage.');
     })
     .stderr.on('data', function(output) {
       err += output;

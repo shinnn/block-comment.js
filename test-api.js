@@ -69,12 +69,14 @@ function runTest(description, main) {
     );
 
     t.throws(
-      main.bind(null, 'a', {start: 'b\n'}), /newline/,
+      main.bind(null, 'a', {start: 'b\n'}),
+      /must not include newline/,
       'should throw an error when `start` option includes \'\\n\'.'
     );
 
     t.throws(
-      main.bind(null, 'a', {start: 'b\r\n'}), /newline/,
+      main.bind(null, 'a', {start: 'b\r\n'}),
+      /must not include newline/,
       'should throw an error when `start` option includes \'\\r\\n\'.'
     );
   });
