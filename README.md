@@ -1,10 +1,12 @@
 # block-comment.js
 
+[![NPM version](https://img.shields.io/npm/v/block-comment.svg?style=flat)](https://www.npmjs.com/package/block-comment)
+[![Bower version](https://img.shields.io/bower/v/block-comment.svg?style=flat)](https://github.com/shinnn/block-comment.js/releases)
 [![Build Status](https://travis-ci.org/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.org/shinnn/block-comment.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/o0c4g0gbgoa481mf?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/block-comment-js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg)](https://coveralls.io/r/shinnn/block-comment.js)
-[![Dependency Status](https://david-dm.org/shinnn/block-comment.js.svg)](https://david-dm.org/shinnn/block-comment.js)
-[![devDependency Status](https://david-dm.org/shinnn/block-comment.js/dev-status.svg)](https://david-dm.org/shinnn/block-comment.js#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg?style=flat&label=cov)](https://coveralls.io/r/shinnn/block-comment.js)
+[![Dependency Status](https://img.shields.io/david/shinnn/block-comment.js.svg?style=flat&label=deps)](https://david-dm.org/shinnn/block-comment.js)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/block-comment.js.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/block-comment.js#info=devDependencies)
 
 Create a multi-line block comment from a string or an array
 
@@ -26,13 +28,13 @@ yields:
 
 ### Package managers
 
-#### [npm](https://www.npmjs.org/) [![NPM version](https://badge.fury.io/js/block-comment.svg)](https://www.npmjs.org/package/block-comment)
+#### [npm](https://www.npmjs.com/)
 
 ```sh
 npm install block-comment
 ```
 
-#### [Bower](http://bower.io/) [![Bower version](https://badge.fury.io/bo/block-comment.svg)](https://github.com/shinnn/block-comment.js/releases)
+#### [Bower](http://bower.io/)
 
 ```sh
 bower install block-comment
@@ -129,6 +131,6 @@ Options:
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
