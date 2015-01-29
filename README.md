@@ -122,7 +122,7 @@ Usage1: block-comment <string>
 Usage2: cat <file> | block-comment <string>
 
 Options:
---start,   -s <string>  Add something (i.e. `!`) to the first line
+--start,   -s <string>  Add something (e.g. `!`) to the first line
 --help,    -h           Print usage information
 --version, -v           Print version
 ```

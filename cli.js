@@ -25,7 +25,7 @@ function help() {
     'Usage2: cat <file> | ' + pkg.name + ' <string>',
     '',
     'Options:',
-    yellow('--start,   -s <string>') + '  Add something (i.e. `!`) to the first line',
+    yellow('--start,   -s <string>') + '  Add something (e.g. `!`) to the first line',
     yellow('--help,    -h         ') + '  Print usage information',
     yellow('--version, -v         ') + '  Print version',
     ''
