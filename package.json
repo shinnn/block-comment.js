@@ -53,5 +53,9 @@
     "istanbul-coveralls": "^1.0.1",
     "jscs": "^1.7.3",
     "tape": "^3.0.1"
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98,
+    "validateLineBreaks": "LF"
   }
 }
