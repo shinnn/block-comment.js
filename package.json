@@ -1,13 +1,12 @@
 {
   "name": "block-comment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a multi-line block comment from a string or an array",
   "main": "block-comment-cjs.js",
   "bin": "cli.js",
   "files": [
     "cli.js",
-    "block-comment-cjs.js",
-    "LICENSE"
+    "block-comment-cjs.js"
   ],
   "scripts": {
     "pretest": "jscs *.js && eslint *.js",
