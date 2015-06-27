@@ -14,18 +14,9 @@
     "coverage": "istanbul cover test-api.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "email": "snnskwtnb@gmail.com",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "repository": "shinnn/block-comment.js",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/block-comment.js/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "string",
     "comment",
@@ -38,14 +29,14 @@
     "chalk": "^1.0.0",
     "get-stdin": "^4.0.1",
     "minimist": "^1.1.1",
-    "sum-up": "^1.0.1"
+    "sum-up": "^1.0.2"
   },
   "devDependencies": {
     "@shinnn/eslintrc": "^1.0.0",
-    "eslint": "^0.20.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "tap-spec": "^3.0.0",
+    "eslint": "^0.24.0",
+    "istanbul": "^0.3.16",
+    "istanbul-coveralls": "^1.0.3",
+    "tap-spec": "^4.0.0",
     "tape": "^4.0.0"
   }
 }
