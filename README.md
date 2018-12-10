@@ -3,7 +3,6 @@
 [![npm version](https://img.shields.io/npm/v/block-comment.svg)](https://www.npmjs.com/package/block-comment)
 [![Bower version](https://img.shields.io/bower/v/block-comment.svg)](https://github.com/shinnn/block-comment.js/releases)
 [![Build Status](https://travis-ci.com/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.com/shinnn/block-comment.js)
-[![Build status](https://ci.appveyor.com/api/projects/status/o0c4g0gbgoa481mf?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/block-comment-js)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg?label=cov)](https://coveralls.io/r/shinnn/block-comment.js)
 
 Create a multiline block comment from a `string` or an `Array`
