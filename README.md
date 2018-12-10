@@ -61,34 +61,6 @@ Add a given `string` immediately after `/*`.
 blockComment('foo', {start: '!'}); //=> '/* @preserve\n * foo\n*/'
 ```
 
-### Properties
-
-This function has three properties used as components of the comment template.
-
-#### blockComment.open
-
-Type: `String`  
-Default: `'/*'`
-
-#### blockComment.linePrefix
-
-Type: `String`  
-Default: `' *'`
-
-#### blockComment.close
-
-Type: `String`  
-Default: `'*/'`
-
-You can overwrite these properties if you want to modify the comment template. However, you don't have to care about them in most cases.
-
-```javascript
-blockComment.open = '/**********';
-blockComment.close = '**********/';
-
-blockComment('foo'); //=> '/**********\n * foo\n**********/'
-```
-
 ## License
 
 Copyright (c) 2014 - 2018 [Shinnosuke Watanabe](https://github.com/shinnn)

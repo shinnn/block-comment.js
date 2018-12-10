@@ -4,40 +4,37 @@
 */
 import appendType from 'append-type';
 
-function blockComment(lines, option) {
-	if (typeof lines !== 'string') {
-		throw new TypeError('Expected a <string> of block comment content, but got ' + appendType(lines) + '.');
+function blockComment(str, option) {
+	if (typeof str !== 'string') {
+		throw new TypeError('Expected a <string> of block comment content, but got a non-string value ' + appendType(str) + '.');
 	}
 
-	lines = lines.split(/\r?\n/);
 	option = option || {};
 
-	var content = '';
-
-	for (var i = 0; i < lines.length; i++) {
-		var prefix = blockComment.linePrefix;
-		if (lines[i] !== '') {
-			prefix += ' ';
-		}
-
-		content += prefix + lines[i] + '\n';
-	}
-
-	var start = '';
+	var start;
 
 	if (option.start !== undefined) {
+		if (typeof option.start !== 'string') {
+			throw new TypeError('Expected `start` option to be a <string>, but got a non-string value ' + appendType(option.start) + '.');
+		}
+
 		if (/\r?\n/.test(option.start)) {
 			throw new Error('start option must not include newlines.');
 		}
 
 		start = option.start;
+	} else {
+		start = '';
 	}
 
-	return blockComment.open + start + '\n' + content + blockComment.close;
-}
+	var lines = str.split(/\r?\n/);
+	var content = '';
 
-blockComment.open = '/*';
-blockComment.linePrefix = ' *';
-blockComment.close = '*/';
+	for (var i = 0; i < lines.length; i++) {
+		content += ' *' + (lines[i].length === 0 ? '' : ' ') + lines[i] + '\n';
+	}
+
+	return '/*' + start + '\n' + content + '*/';
+}
 
 export default blockComment;

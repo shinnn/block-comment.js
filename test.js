@@ -29,20 +29,16 @@ test('blockComment()', t => {
  * b
 */`, 'should prepend a string using `start` option.');
 
-	blockComment.open = 'a';
-	blockComment.linePrefix = 'b';
-	blockComment.close = 'c';
-
-	t.equal(
-		blockComment(''),
-		'a\nb\nc',
-		'should modify template using its properties.'
+	t.throws(
+		() => blockComment(1),
+		/^TypeError.*Expected a <string> of block comment content, but got a non-string value 1 \(number\)\./u,
+		'should throw an error when the first argument is not a string or an array.'
 	);
 
 	t.throws(
-		() => blockComment(1),
-		/^TypeError.*Expected a <string> of block comment content, but got 1 \(number\)\./u,
-		'should throw an error when the first argument is not a string or an array.'
+		() => blockComment('a', {start: true}),
+		/^TypeError.*Expected `start` option to be a <string>, but got a non-string value true \(boolean\)\./u,
+		'should throw an error when `start` option is not a string.'
 	);
 
 	t.throws(
