@@ -1,6 +1,6 @@
 {
 	"name": "block-comment",
-	"version": "2.0.0-1",
+	"version": "2.0.0-2",
 	"description": "Generate a multiline block comment from a string",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"repository": "shinnn/block-comment.js",
