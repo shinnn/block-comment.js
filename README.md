@@ -1,17 +1,15 @@
-# block-comment.js
+# block-comment
 
-[![NPM version](https://img.shields.io/npm/v/block-comment.svg)](https://www.npmjs.com/package/block-comment)
+[![npm version](https://img.shields.io/npm/v/block-comment.svg)](https://www.npmjs.com/package/block-comment)
 [![Bower version](https://img.shields.io/bower/v/block-comment.svg)](https://github.com/shinnn/block-comment.js/releases)
-[![Build Status](https://travis-ci.org/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.org/shinnn/block-comment.js)
+[![Build Status](https://travis-ci.com/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.com/shinnn/block-comment.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/o0c4g0gbgoa481mf?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/block-comment-js)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg?label=cov)](https://coveralls.io/r/shinnn/block-comment.js)
-[![Dependency Status](https://img.shields.io/david/shinnn/block-comment.js.svg?label=deps)](https://david-dm.org/shinnn/block-comment.js)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/block-comment.js.svg?label=devDeps)](https://david-dm.org/shinnn/block-comment.js#info=devDependencies)
 
-Create a multi-line block comment from a string or an array
+Create a multiline block comment from a `string` or an `Array`
 
 ```javascript
-var comment = blockComment('Hello\nworld.', {start: '!'})
+const comment = blockComment('Hello\nworld.', {start: '!'})
 console.log(comment);
 ```
 
@@ -34,39 +32,33 @@ yields:
 npm install block-comment
 ```
 
-#### [Bower](http://bower.io/)
+#### [Bower](https://bower.io/)
 
 ```
 bower install block-comment
 ```
 
-#### [Duo](http://duojs.org/)
+## API
 
 ```javascript
-const blockComment = require('shinnn/block-comment.js');
+import blockComment from 'block-comment';
 ```
-
-### Standalone
-
-[Download the script file directly.](https://raw.githubusercontent.com/shinnn/block-comment.js/master/block-comment.js)
-
-## API
 
 ### blockComment(*content* [, *option*])
 
-*content*: `String` or `Array` of `String`  
+*content*: `string` or `string[]`  
 *option*: `Object`  
-Return: `String`
+Return: `string`
 
-It returns a string of ECMAScript multi-line comment.
+It returns a `string` of ECMAScript multi-line comment.
 
-When *content* is a string, the result reflects the newlines of *content*.
+When *content* is a `string`, the result reflects the newlines of *content*.
 
 ```javascript
 blockComment('foo\nbar\r\nbaz'); //=> '/*\n * foo\n * bar\n * baz\n*/'
 ```
 
-You can also specify *content* with an array.
+You can also specify *content* with an `Array`.
 
 ```javascript
 blockComment(['foo', 'bar']); //=> '/*\n * foo\n * bar\n*/'
@@ -74,7 +66,7 @@ blockComment(['foo', 'bar']); //=> '/*\n * foo\n * bar\n*/'
 
 #### option.start
 
-Type: `String`
+Type: `string`
 Default: `''`
 
 Adds a string immediately after `/*`.
@@ -131,6 +123,6 @@ Options:
 
 ## License
 
-Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2018 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
