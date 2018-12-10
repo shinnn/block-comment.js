@@ -1,13 +1,14 @@
 {
 	"name": "block-comment",
 	"version": "2.0.0-1",
-	"description": "Create a multiline block comment from a string or an array",
+	"description": "Generate a multiline block comment from a string",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"repository": "shinnn/block-comment.js",
 	"license": "MIT",
-	"main": "block-comment-cjs.js",
+	"module": "index.mjs",
 	"files": [
-		"block-comment-cjs.js"
+		"index.js",
+		"index.mjs"
 	],
 	"scripts": {
 		"prebuild": "eslint .",
@@ -21,6 +22,9 @@
 		"block",
 		"multline"
 	],
+	"dependencies": {
+		"append-type": "^1.0.1"
+	},
 	"devDependencies": {
 		"@shinnn/eslint-config": "^6.8.4",
 		"eslint": "^5.10.0",

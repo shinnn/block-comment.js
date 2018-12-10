@@ -20,17 +20,9 @@ test('blockComment()', t => {
  * c
 */`, 'should normalize newlines.');
 
-	t.equal(blockComment(['a', 'b']), `/*
- * a
- * b
-*/`, 'should return a comment from an array.');
-
 	t.equal(blockComment(''), `/*
  *
 */`, 'should accept an empty string.');
-
-	t.equal(blockComment([]), `/*
-*/`, 'should accept an empty array.');
 
 	t.equal(blockComment('a\nb', {start: '!'}), `/*!
  * a
@@ -49,7 +41,7 @@ test('blockComment()', t => {
 
 	t.throws(
 		() => blockComment(1),
-		/^TypeError/u,
+		/^TypeError.*Expected a <string> of block comment content, but got 1 \(number\)\./u,
 		'should throw an error when the first argument is not a string or an array.'
 	);
 

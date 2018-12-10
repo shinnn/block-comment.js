@@ -1,11 +1,10 @@
 # block-comment
 
 [![npm version](https://img.shields.io/npm/v/block-comment.svg)](https://www.npmjs.com/package/block-comment)
-[![Bower version](https://img.shields.io/bower/v/block-comment.svg)](https://github.com/shinnn/block-comment.js/releases)
 [![Build Status](https://travis-ci.com/shinnn/block-comment.js.svg?branch=master)](https://travis-ci.com/shinnn/block-comment.js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg?label=cov)](https://coveralls.io/r/shinnn/block-comment.js)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/block-comment.js.svg)](https://coveralls.io/github/shinnn/block-comment.js)
 
-Create a multiline block comment from a `string` or an `Array`
+Generate a multiline block comment from a `string`
 
 ```javascript
 const comment = blockComment('Hello\nworld.', {start: '!'})
@@ -23,18 +22,10 @@ yields:
 
 ## Installation
 
-### Package managers
-
-#### [npm](https://www.npmjs.com/)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install block-comment
-```
-
-#### [Bower](https://bower.io/)
-
-```
-bower install block-comment
 ```
 
 ## API
@@ -45,7 +36,7 @@ import blockComment from 'block-comment';
 
 ### blockComment(*content* [, *option*])
 
-*content*: `string` or `string[]`  
+*content*: `string`  
 *option*: `Object`  
 Return: `string`
 
@@ -57,23 +48,17 @@ When *content* is a `string`, the result reflects the newlines of *content*.
 blockComment('foo\nbar\r\nbaz'); //=> '/*\n * foo\n * bar\n * baz\n*/'
 ```
 
-You can also specify *content* with an `Array`.
-
-```javascript
-blockComment(['foo', 'bar']); //=> '/*\n * foo\n * bar\n*/'
-```
-
 #### option.start
 
-Type: `string`
+Type: `string`  
 Default: `''`
 
-Adds a string immediately after `/*`.
-
-For example, if you use some JavaScript compression tools such as [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify#preservecomments) and [gulp-uglify](https://github.com/terinjokes/gulp-uglify), you can preserve the comment by adding `!`;
+Add a given `string` immediately after `/*`.
 
 ```javascript
-blockComment('foo', {start: '!'}); //=> '/*!\n * foo\n*/'
+// terser preserves comments with @preserve directive
+// https://github.com/terser-js/terser#keeping-copyright-notices-or-other-comments
+blockComment('foo', {start: '!'}); //=> '/* @preserve\n * foo\n*/'
 ```
 
 ### Properties
@@ -102,22 +87,6 @@ blockComment.open = '/**********';
 blockComment.close = '**********/';
 
 blockComment('foo'); //=> '/**********\n * foo\n**********/'
-```
-
-## CLI
-
-You can use this module as a CLI tool by installing it [globally](https://docs.npmjs.com/files/folders#global-installation).
-
-### Usage
-
-```
-Usage1: block-comment <string>
-Usage2: cat <file> | block-comment <string>
-
-Options:
---start,   -s <string>  Add something (e.g. `!`) to the first line
---help,    -h           Print usage information
---version, -v           Print version
 ```
 
 ## License

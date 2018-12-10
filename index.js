@@ -1,15 +1,19 @@
 'use strict';
 
+var appendType = require('append-type');
+
 /*!
  * block-comment | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/block-comment
 */
 
 function blockComment(lines, option) {
-	option = option || {};
-	if (!Array.isArray(lines)) {
-		lines = lines.split(/\r?\n/);
+	if (typeof lines !== 'string') {
+		throw new TypeError('Expected a <string> of block comment content, but got ' + appendType(lines) + '.');
 	}
+
+	lines = lines.split(/\r?\n/);
+	option = option || {};
 
 	var content = '';
 

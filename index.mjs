@@ -2,12 +2,15 @@
  * block-comment | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/block-comment
 */
+import appendType from 'append-type';
 
 function blockComment(lines, option) {
-	option = option || {};
-	if (!Array.isArray(lines)) {
-		lines = lines.split(/\r?\n/);
+	if (typeof lines !== 'string') {
+		throw new TypeError('Expected a <string> of block comment content, but got ' + appendType(lines) + '.');
 	}
+
+	lines = lines.split(/\r?\n/);
+	option = option || {};
 
 	var content = '';
 
