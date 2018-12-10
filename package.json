@@ -10,25 +10,30 @@
 		"block-comment-cjs.js"
 	],
 	"scripts": {
-		"pretest": "eslint --config node_modules/@shinnn/eslintrc/rc.json --rule 'no-reserved-keys: 0' --ignore-path .gitignore .",
-		"test": "node test.js | tap-spec",
-		"coverage": "istanbul cover test.js",
-		"coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+		"prebuild": "eslint .",
+		"build": "rollup --config=node:module",
+		"pretest": "npm run-script build",
+		"test": "nyc node test.js"
 	},
 	"keywords": [
 		"string",
 		"comment",
 		"block",
-		"multline",
-		"browser",
-		"client-side"
+		"multline"
 	],
 	"devDependencies": {
-		"@shinnn/eslintrc": "^1.0.0",
-		"eslint": "^0.24.0",
-		"istanbul": "^0.3.17",
-		"istanbul-coveralls": "^1.0.3",
-		"tap-spec": "^4.0.0",
-		"tape": "^4.0.0"
+		"@shinnn/eslint-config": "^6.8.4",
+		"eslint": "^5.10.0",
+		"nyc": "^13.1.0",
+		"nyc-config-common": "^1.0.1",
+		"rollup": "^0.67.4",
+		"rollup-config-module": "^2.0.1",
+		"tape": "^4.9.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
 	}
 }
